@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+	<title>
+    </title>
+</head>
+<body>
+    <script src="./basic.js">
+    </script>
+    <h1>“Hello World from HTML”
+    </h1>
+    <input  placeholder="Type Something......" id="myInput"></input><br>
+    <button id="myBtn" onclick="console.log('Hello world from inline JavaScript !'); msg();"> Push Me!</button>
+    <p id="demo"></p>
+   <script>
+      document.getElementById("myBtn").addEventListener("click", onButtonClicked);
+      document.getElementById("myBtn").addEventListener("click",getInputValue);
+      document.getElementById("myBtn").addEventListener("click",size);
+
+      function onButtonClicked () {
+  
+        console.log('I’m in the button click event'); 
+    }
+    function getInputValue(){
+            // Selecting the input element and get its value 
+            var inputVal = document.getElementById("myInput").value;
+            
+            // Displaying the value
+            console.log(inputVal);
+    }
+    function size() {
+             var message;
+             var parameter = document.getElementById("myInput").value;
+             
+    
+            if (parameter < 10) {
+             message = "< 10 - ‘small’";
+            } else if ( parameter < 20) {
+              message = "10 - 19 - ‘med’";
+            } else if (parameter>20) {
+              message = ">= 20 ‘large’";
+            } else {
+              message="N0 Number";
+            }
+
+         document.getElementById("demo").innerHTML = message;
+  }
+    </script>
+</body>
+</html>
